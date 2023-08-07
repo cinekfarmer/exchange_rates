@@ -10,37 +10,27 @@
   <meta name="author" content="cinekfarmer"/>
   
   <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link rel="stylesheet" href="fontello/css/fontello.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    
-  </header>
+<body onload="loadCurrencies();">
   <main>
-    <form>
-      <label id="fromCurrency"></label>
-      <select id="fromCurrency" name="fromCurrency" onkeyup="">
-        
-      </select>
-      
-      <label id="value"></label>
-      <input type="number" id="value" onkeyup="" value="1"/>
-      
-      <label id="toCurrency"></label>
-      <select id="toCurrnecy" name="toCurrency" onkeyup="">
-        
-      </select>
-      
-      <label id="result"></label>
-      <input type="number" id="result" disabled/>
-    </form>
+    <header>
+      <h1>Wymiana walut</h1>
+    </header>
+    <article>
+      <select class="currency" id="fromCurrency" onclick="showOutput()">  </select><!--
+      --><input id="input" type="number" value="1" min="0" onkeyup="showOutput()" onclick="showOutput()"/>
+    </article>
+    
+    <button onclick="switchCurrencies()"><span class="icon-exchange"></span></button>
+    <article>
+      <select class="currency" id="toCurrency" onclick="showOutput()">  </select><!--
+      --><div id="output"></div>
+    </article>
+    <script src="script.js" type="text/javascript"></script>
   </main>
-  <section>
-    
-  </section>
-  <section>
-    
-  </section>
-  
-  <script link="script.js" type="text/javascript"></script>
 </body>
 </html>
